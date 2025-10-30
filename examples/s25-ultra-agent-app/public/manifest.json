@@ -1,0 +1,55 @@
+{
+  "name": "Coding Agent - S25 Ultra",
+  "short_name": "Coding Agent",
+  "description": "AI-powered coding assistant for Samsung Galaxy S25 Ultra",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#6c5ce7",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "developer tools"],
+  "screenshots": [
+    {
+      "src": "/screenshot1.png",
+      "sizes": "1080x2340",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chat",
+      "short_name": "Chat",
+      "description": "Open chat agent",
+      "url": "/?agent=chat",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Generate Code",
+      "short_name": "Generate",
+      "description": "Generate code with AI",
+      "url": "/?agent=generate",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Bash",
+      "short_name": "Bash",
+      "description": "Execute bash commands",
+      "url": "/?agent=bash",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# PM2
+.pm2/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+lib-cov/
+coverage/
+.nyc_output/
+.grunt/
+.lock-wscript/
+
+# Build
+build/
+dist/
+out/
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+.node_repl_history
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.nyc_output/
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# PWA cache
+public/sw.js.map
