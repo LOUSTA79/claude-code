@@ -48,6 +48,11 @@ func main() {
 
 	rootCmd.AddCommand(
 		createCmd("chat", "💬 Interactive chat", agents.NewChatAgent),
+		createCmd("read", "📖 Read and analyze files", agents.NewReadAgent),
+		createCmd("list", "📁 List directory contents", agents.NewListAgent),
+		createCmd("bash", "⚡ Execute shell commands", agents.NewBashAgent),
+		createCmd("edit", "✏️  Create and edit files", agents.NewEditAgent),
+		createCmd("search", "🔍 Search code", agents.NewSearchAgent),
 	)
 
 	if err := rootCmd.Execute(); err != nil {
