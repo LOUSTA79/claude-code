@@ -1,0 +1,38 @@
+{
+  "name": "s25-ultra-coding-agent",
+  "version": "1.0.0",
+  "description": "AI-powered coding agent app for Samsung Galaxy S25 Ultra",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "install-global": "npm install -g pm2",
+    "pm2:start": "pm2 start server/index.js --name coding-agent",
+    "pm2:stop": "pm2 stop coding-agent",
+    "pm2:restart": "pm2 restart coding-agent",
+    "pm2:logs": "pm2 logs coding-agent"
+  },
+  "keywords": [
+    "ai",
+    "coding",
+    "agent",
+    "samsung",
+    "s25-ultra",
+    "pwa",
+    "openai",
+    "mobile"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "openai": "^4.20.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

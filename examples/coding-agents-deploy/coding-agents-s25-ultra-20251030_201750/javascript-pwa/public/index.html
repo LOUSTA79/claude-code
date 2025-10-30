@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="AI Coding Agent for Samsung S25 Ultra">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Coding Agent - S25 Ultra</title>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #00b894;
+            --danger: #d63031;
+            --warning: #fdcb6e;
+            --dark: #1a1a2e;
+            --darker: #16213e;
+            --light: #f8f9fa;
+            --text: #e0e0e0;
+            --border: #2c3e50;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Samsung S25 Ultra optimizations */
+        @media screen and (min-width: 360px) and (max-width: 420px) {
+            body {
+                font-size: 16px; /* Prevent zoom on input focus */
+            }
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-height: -webkit-fill-available;
+        }
+
+        /* Header */
+        .header {
+            background: var(--darker);
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .app-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .device-badge {
+            font-size: 11px;
+            background: var(--primary);
+            padding: 4px 8px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        /* Agent Tabs */
+        .agent-tabs {
+            display: flex;
+            overflow-x: auto;
+            background: var(--darker);
+            padding: 8px 16px;
+            gap: 8px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .agent-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .agent-tab {
+            flex-shrink: 0;
+            padding: 10px 16px;
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .agent-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .agent-tab:active {
+            transform: scale(0.95);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .agent-panel {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .agent-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Chat Interface */
+        .chat-messages {
+            min-height: 300px;
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-bottom: 16px;
+            padding: 12px;
+            background: var(--darker);
+            border-radius: 12px;
+        }
+
+        .message {
+            margin-bottom: 16px;
+            padding: 12px;
+            border-radius: 12px;
+            max-width: 85%;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background: var(--primary);
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.agent {
+            background: var(--dark);
+            border: 1px solid var(--border);
+        }
+
+        .message.system {
+            background: var(--warning);
+            color: var(--dark);
+            text-align: center;
+            max-width: 100%;
+            font-size: 13px;
+        }
+
+        /* Input Area */
+        .input-area {
+            display: flex;
+            gap: 8px;
+            position: sticky;
+            bottom: 0;
+            background: var(--dark);
+            padding: 12px 0;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            flex: 1;
+            padding: 12px;
+            background: var(--darker);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 16px; /* Prevent zoom on iOS */
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: var(--primary);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        button.secondary {
+            background: var(--secondary);
+        }
+
+        button.danger {
+            background: var(--danger);
+        }
+
+        .voice-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .voice-btn.recording {
+            background: var(--danger);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* File List */
+        .file-list {
+            list-style: none;
+        }
+
+        .file-item {
+            padding: 12px;
+            background: var(--darker);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .file-item:active {
+            transform: translateX(4px);
+            background: var(--dark);
+        }
+
+        .file-item.directory {
+            border-left: 3px solid var(--primary);
+        }
+
+        .file-item.file {
+            border-left: 3px solid var(--secondary);
+        }
+
+        /* Code Display */
+        .code-block {
+            background: var(--darker);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 12px 0;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            padding: 12px 24px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            z-index: 1000;
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translate(-50%, 20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
+        .toast.success { border-left: 4px solid var(--secondary); }
+        .toast.error { border-left: 4px solid var(--danger); }
+        .toast.warning { border-left: 4px solid var(--warning); }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 12px;
+            }
+
+            .app-title {
+                font-size: 18px;
+            }
+
+            .main-content {
+                padding: 12px;
+            }
+        }
+
+        /* Dark scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">🤖 Coding Agent</h1>
+                <span class="device-badge">S25 Ultra</span>
+            </div>
+        </header>
+
+        <!-- Agent Tabs -->
+        <nav class="agent-tabs">
+            <div class="agent-tab active" data-agent="chat">💬 Chat</div>
+            <div class="agent-tab" data-agent="read">📖 Read</div>
+            <div class="agent-tab" data-agent="list">📁 List</div>
+            <div class="agent-tab" data-agent="bash">⚡ Bash</div>
+            <div class="agent-tab" data-agent="edit">✏️ Edit</div>
+            <div class="agent-tab" data-agent="search">🔍 Search</div>
+            <div class="agent-tab" data-agent="generate">🤖 Generate</div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Agent -->
+            <div class="agent-panel active" id="panel-chat">
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="input-area">
+                    <input type="text" id="chat-input" placeholder="Ask anything..." />
+                    <button id="chat-send">Send</button>
+                    <button class="voice-btn" id="voice-btn">🎤</button>
+                </div>
+            </div>
+
+            <!-- Read Agent -->
+            <div class="agent-panel" id="panel-read">
+                <h2>📖 Read File</h2>
+                <div style="margin: 16px 0;">
+                    <input type="text" id="read-path" placeholder="/path/to/file.js" />
+                    <button id="read-btn" style="margin-top: 8px; width: 100%;">Read & Analyze</button>
+                </div>
+                <div id="read-result"></div>
+            </div>
+
+            <!-- List Agent -->
+            <div class="agent-panel" id="panel-list">
+                <h2>📁 List Directory</h2>
+                <div style="margin: 16px 0;">
+                    <input type="text" id="list-path" placeholder="." value="." />
+                    <button id="list-btn" style="margin-top: 8px; width: 100%;">List Files</button>
+                </div>
+                <ul class="file-list" id="file-list"></ul>
+            </div>
+
+            <!-- Bash Agent -->
+            <div class="agent-panel" id="panel-bash">
+                <h2>⚡ Execute Command</h2>
+                <div style="margin: 16px 0;">
+                    <input type="text" id="bash-cmd" placeholder="ls -la" />
+                    <button id="bash-btn" style="margin-top: 8px; width: 100%;">Execute</button>
+                </div>
+                <div class="code-block" id="bash-output" style="min-height: 200px;"></div>
+            </div>
+
+            <!-- Edit Agent -->
+            <div class="agent-panel" id="panel-edit">
+                <h2>✏️ Edit File</h2>
+                <div style="margin: 16px 0;">
+                    <input type="text" id="edit-path" placeholder="/path/to/file.js" />
+                    <textarea id="edit-content" placeholder="File content..."></textarea>
+                    <button id="edit-btn" style="margin-top: 8px; width: 100%;">Save File</button>
+                </div>
+                <div id="edit-result"></div>
+            </div>
+
+            <!-- Search Agent -->
+            <div class="agent-panel" id="panel-search">
+                <h2>🔍 Search Code</h2>
+                <div style="margin: 16px 0;">
+                    <input type="text" id="search-query" placeholder="Search term..." />
+                    <input type="text" id="search-path" placeholder="Search path (default: .)" value="." />
+                    <button id="search-btn" style="margin-top: 8px; width: 100%;">Search</button>
+                </div>
+                <div id="search-results"></div>
+            </div>
+
+            <!-- Generate Agent -->
+            <div class="agent-panel" id="panel-generate">
+                <h2>🤖 Generate Code</h2>
+                <div style="margin: 16px 0;">
+                    <textarea id="generate-prompt" placeholder="Describe the code you want..."></textarea>
+                    <select id="generate-lang" style="margin-top: 8px;">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="go">Go</option>
+                        <option value="java">Java</option>
+                        <option value="rust">Rust</option>
+                    </select>
+                    <button id="generate-btn" style="margin-top: 8px; width: 100%;">Generate</button>
+                </div>
+                <div class="code-block" id="generate-output"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/app.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('✅ Service Worker registered'))
+                .catch(err => console.error('❌ Service Worker registration failed:', err));
+        }
+    </script>
+</body>
+</html>
