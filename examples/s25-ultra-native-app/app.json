@@ -1,0 +1,11 @@
+{
+  "name": "S25CodingAgent",
+  "displayName": "S25 Coding Agent",
+  "version": "1.0.0",
+  "description": "AI Coding Assistant for Samsung Galaxy S25 Ultra",
+  "author": "LOUSTA79",
+  "icon": "./assets/icon.png",
+  "orientation": "portrait",
+  "backgroundColor": "#1a1a1a",
+  "primaryColor": "#00d9ff"
+}
