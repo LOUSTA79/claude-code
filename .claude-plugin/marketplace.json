@@ -57,6 +57,17 @@
       },
       "source": "./plugins/security-guidance",
       "category": "security"
+    },
+    {
+      "name": "app-launcher",
+      "description": "One-click automated application launch system with dependency management, environment validation, and intelligent app detection",
+      "version": "1.0.0",
+      "author": {
+        "name": "Claude Code",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/app-launcher",
+      "category": "productivity"
     }
   ]
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- **New Plugin: app-launcher**: One-click automated application launch system with intelligent app detection, dependency management, and environment validation
+  - `/launch` command for instant application startup with auto-detection of Node.js, Python, Agent SDK, Docker, and more
+  - `launch-validator` agent for comprehensive pre-flight checks and readiness reports
+  - Automatic dependency installation and environment configuration
+  - Support for TypeScript, Python, Agent SDK, Docker, Go, Rust, and Java applications
+  - Smart launch command selection based on project structure and configuration
+
 ## 2.0.13
 
 - Fixed `/plugin` not working on native build
