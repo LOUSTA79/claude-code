@@ -1,0 +1,36 @@
+# Core dependencies
+python>=3.9
+
+# HTTP/Async
+aiohttp>=3.9.0
+asyncio
+
+# Cryptography and Security
+cryptography>=41.0.0
+pycryptodome>=3.19.0
+
+# API clients
+stripe>=7.0.0
+paypalrestsdk>=1.13.1
+
+# AWS (for production secrets management)
+boto3>=1.28.0
+botocore>=1.31.0
+
+# Data handling
+pandas>=2.0.0
+
+# Optional: Twilio for SMS alerts
+twilio>=8.10.0
+
+# Optional: Database (if not using file storage)
+psycopg2-binary>=2.9.0  # PostgreSQL
+redis>=5.0.0  # For caching
+
+# Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+black>=23.0.0
+mypy>=1.5.0
+flake8>=6.1.0
