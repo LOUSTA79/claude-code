@@ -1,0 +1,48 @@
+{
+  "hooks": [
+    {
+      "name": "subscription-validator",
+      "description": "Validates subscription tier and enforces feature gates and usage limits",
+      "type": "PreToolUse",
+      "matcher": {
+        "tools": [
+          "Task:*tool-discovery*",
+          "Task:*recommendation-engine*",
+          "Task:*tool-comparison*",
+          "Task:*workflow-builder*",
+          "Write:**/workflows/*.json",
+          "Write:**/exports/*"
+        ]
+      },
+      "script": "./validate-subscription.py",
+      "enabled": true,
+      "blocking": true
+    },
+    {
+      "name": "usage-tracker",
+      "description": "Tracks usage of premium features for billing and analytics",
+      "type": "PostToolUse",
+      "matcher": {
+        "tools": [
+          "Task:*",
+          "Write:**/workflows/*.json",
+          "Write:**/exports/*"
+        ]
+      },
+      "script": "./track-usage.py",
+      "enabled": true,
+      "blocking": false
+    },
+    {
+      "name": "api-rate-limiter",
+      "description": "Enforces API rate limits based on subscription tier",
+      "type": "PreToolUse",
+      "matcher": {
+        "tools": ["WebFetch:*"]
+      },
+      "script": "./rate-limiter.py",
+      "enabled": true,
+      "blocking": true
+    }
+  ]
+}

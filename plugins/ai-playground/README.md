@@ -44,6 +44,123 @@ Professional AI tool discovery and integration platform for Claude Code. Discove
 - **Team Sharing**: Share curated tool collections
 - **Version Control**: Track workflows in git
 
+### 💳 Monetization & Subscriptions
+- **Flexible Pricing**: Free, Pro ($29/mo), Team ($99/mo), Enterprise (custom)
+- **14-Day Free Trials**: Try Pro and Team plans risk-free
+- **Usage Tracking**: Real-time monitoring and enforcement of limits
+- **Smart Upgrades**: Prorated billing and seamless plan changes
+- **Enterprise Features**: SSO, custom branding, dedicated support, 99.9% SLA
+
+## Pricing
+
+### Free - $0/month
+Perfect for individual developers exploring AI tools
+
+**Features:**
+- 50 tool searches/month
+- 10 AI recommendations/month
+- 20 tool comparisons/month
+- 3 workflows, 100 executions/month
+- Basic analytics (30 days retention)
+- Export in JSON format
+- Community support
+
+**[Start Free](#quick-start)**
+
+### Pro - $29/month ⭐
+*Most Popular* - For professionals needing advanced features
+
+**Everything in Free, plus:**
+- ✅ **Unlimited** tool searches & recommendations
+- ✅ **Unlimited** tool comparisons
+- ✅ 25 workflows, 5,000 executions/month
+- ✅ Advanced analytics (1 year retention)
+- ✅ All export formats (JSON, CSV, YAML, XML)
+- ✅ Custom tool integrations (10 max)
+- ✅ Priority email support (24-hour response)
+- ✅ API access (1,000 requests/hour)
+- ✅ ROI tracking and reporting
+
+**Savings:** $69/year with annual billing (20% off)
+
+**[Start 14-Day Free Trial](#quick-start)** | `/ billing trial pro`
+
+### Team - $99/month (3 seats)
+For teams collaborating on AI tool adoption
+
+**Everything in Pro, plus:**
+- ✅ **Team collaboration** and real-time sharing
+- ✅ 100 workflows, 25,000 executions/month
+- ✅ User management & role-based permissions
+- ✅ Team analytics and productivity insights
+- ✅ Audit logs (90 days retention)
+- ✅ Advanced support (4-hour SLA)
+- ✅ API access (10,000 requests/hour)
+- ✅ Custom integrations (50 max)
+- ✅ Cost allocation and team ROI tracking
+
+**Additional seats:** $29/seat/month
+**Savings:** $238/year with annual billing (20% off)
+
+**[Start 14-Day Free Trial](#quick-start)** | `/billing trial team`
+
+### Enterprise - Custom Pricing
+For organizations requiring advanced security and compliance
+
+**Everything in Team, plus:**
+- ✅ **Unlimited** everything (workflows, executions, API requests)
+- ✅ Single Sign-On (SSO) - SAML, OIDC, Azure AD, Okta
+- ✅ Advanced security (2FA, IP whitelist, encryption at rest)
+- ✅ Custom branding and white-label options
+- ✅ Dedicated instance with custom deployment
+- ✅ Full compliance (SOC 2, GDPR, HIPAA, ISO 27001)
+- ✅ Dedicated account manager
+- ✅ Premium support (1-hour SLA) + phone support
+- ✅ Professional services (custom integrations, training)
+- ✅ Custom contracts and SLAs
+- ✅ 99.9% uptime guarantee
+- ✅ Data residency options
+- ✅ Priority feature requests
+
+**Minimum:** 25 seats
+**Trial:** 30 days
+
+**[Contact Sales](#support)** | `/billing contact`
+
+### Add-Ons
+
+Available for Pro and Team plans:
+
+- **Extra Workflow Executions**: $10 per 1,000 executions
+- **Additional Team Seats**: $29/seat/month
+- **Extended Analytics Retention (5 years)**: $49/month
+- **Premium Support (1-hour SLA)**: $199/month
+- **Custom Tool Integration** (one-time): $499
+
+### Special Discounts
+
+- **50% off** for nonprofits and educational institutions
+- **30% off** for qualifying startups (12-month duration)
+- **20% off** with annual billing (all plans)
+
+**Apply discount:** `/billing discount [code]`
+
+### Payment & Billing
+
+**Accepted payment methods:**
+- Credit/Debit Cards (Visa, Mastercard, Amex, Discover)
+- PayPal
+- Bank Transfer (Enterprise only)
+- Invoice billing (Enterprise only)
+
+**Billing policies:**
+- 30-day money-back guarantee
+- Cancel anytime, no penalties
+- Prorated upgrades and credits
+- Secure payment processing (PCI DSS Level 1)
+
+**Manage billing:** `/billing status` | `/billing plans` | `/billing upgrade`
+
 ## Quick Start
 
 ### Installation
@@ -166,6 +283,29 @@ Export and import tool collections, workflows, and preferences.
 
 **[Full Documentation →](commands/export-import.md)**
 
+### `/billing [operation]`
+Manage subscriptions, billing, and payments.
+
+**Examples:**
+```bash
+/billing status
+/billing plans
+/billing usage
+/billing trial pro
+/billing upgrade team
+/billing cancel
+```
+
+**Features:**
+- Subscription management
+- Usage tracking and limits
+- Payment method updates
+- Invoice history
+- Upgrade/downgrade plans
+- Discount code application
+
+**[Full Documentation →](commands/billing.md)**
+
 ## Available Agents
 
 ### tool-discovery
@@ -212,6 +352,15 @@ Analytics and ROI calculation specialist.
 **Color**: Cyan
 
 **[Full Documentation →](agents/analytics-roi.md)**
+
+### subscription-manager
+Subscription and billing management specialist.
+
+**Tools**: Read, Write, Grep, WebFetch
+**Model**: Sonnet
+**Color**: Gold
+
+**[Full Documentation →](agents/subscription-manager.md)**
 
 ## AI Tools Database
 

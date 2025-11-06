@@ -1,7 +1,7 @@
 {
   "name": "ai-playground",
-  "version": "1.0.0",
-  "description": "Professional AI Playground Platform - Discover, compare, and integrate the latest AI tools (2024-2025) with enterprise-grade features including semantic search, tool recommendations, workflow automation, real-time collaboration, and comprehensive analytics",
+  "version": "2.0.0",
+  "description": "Professional AI Playground Platform - Discover, compare, and integrate the latest AI tools (2024-2025) with enterprise-grade features including semantic search, tool recommendations, workflow automation, monetization, subscription management, and comprehensive analytics",
   "author": {
     "name": "Claude Code Team",
     "email": "support@anthropic.com"
@@ -17,6 +17,9 @@
     "collaboration",
     "analytics",
     "benchmarking",
+    "monetization",
+    "subscriptions",
+    "billing",
     "llama",
     "flux",
     "mistral",
@@ -30,6 +33,10 @@
     "Real-time collaboration",
     "Analytics and ROI tracking",
     "Export/import tool collections",
+    "Flexible pricing tiers (Free, Pro, Team, Enterprise)",
+    "Usage tracking and limits enforcement",
+    "Subscription and billing management",
+    "Payment processing integration",
     "Security and compliance validation",
     "Interactive tutorials and onboarding"
   ],
