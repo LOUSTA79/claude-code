@@ -2,6 +2,30 @@
 
 A production-ready system for automating revenue collection from multiple platforms (Amazon KDP, Google Play Books, Apple Books, Stripe, PayPal), with proper security, tax calculations, and automated bank transfers.
 
+## 🌟 NEW: Complete Automated Publishing Empire
+
+This system now includes **book production** capabilities, creating a complete end-to-end automated publishing business:
+
+- 📚 **Generate Books** - AI-powered book generation using GPT-4
+- 📤 **Auto-Publish** - Publish to Amazon KDP automatically
+- 💰 **Collect Revenue** - Daily revenue collection from all platforms
+- 🏦 **Bank Transfers** - Automated transfers to your account
+- 📊 **Performance Tracking** - ROI analysis and optimization
+
+**See [EMPIRE_GUIDE.md](EMPIRE_GUIDE.md) for the complete automated publishing empire guide.**
+
+**Quick Empire Launch:**
+```bash
+# Check readiness
+python -m src.empire check
+
+# Launch with books
+python -m src.empire launch example_books.json
+
+# Daily operations
+python -m src.empire daily
+```
+
 ## 🎯 Features
 
 ### Security & Compliance
