@@ -1,0 +1,38 @@
+{
+  "name": "ai-playground",
+  "version": "1.0.0",
+  "description": "Professional AI Playground Platform - Discover, compare, and integrate the latest AI tools (2024-2025) with enterprise-grade features including semantic search, tool recommendations, workflow automation, real-time collaboration, and comprehensive analytics",
+  "author": {
+    "name": "Claude Code Team",
+    "email": "support@anthropic.com"
+  },
+  "category": "development",
+  "keywords": [
+    "ai-tools",
+    "llm",
+    "playground",
+    "tool-discovery",
+    "recommendations",
+    "workflow-automation",
+    "collaboration",
+    "analytics",
+    "benchmarking",
+    "llama",
+    "flux",
+    "mistral",
+    "gemini"
+  ],
+  "features": [
+    "Latest AI tools database (2024-2025)",
+    "AI-powered semantic search and recommendations",
+    "Tool comparison and benchmarking",
+    "Workflow automation builder",
+    "Real-time collaboration",
+    "Analytics and ROI tracking",
+    "Export/import tool collections",
+    "Security and compliance validation",
+    "Interactive tutorials and onboarding"
+  ],
+  "dependencies": {},
+  "license": "MIT"
+}

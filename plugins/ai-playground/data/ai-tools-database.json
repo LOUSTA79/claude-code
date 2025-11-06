@@ -1,0 +1,754 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-06",
+  "categories": {
+    "language-models": {
+      "name": "Language Models",
+      "description": "Large Language Models for text generation, chat, and reasoning"
+    },
+    "image-generation": {
+      "name": "Image Generation",
+      "description": "AI models for creating and editing images"
+    },
+    "code-assistance": {
+      "name": "Code Assistance",
+      "description": "AI-powered coding tools and IDEs"
+    },
+    "browser-extensions": {
+      "name": "Browser Extensions",
+      "description": "AI browser extensions for productivity"
+    },
+    "api-services": {
+      "name": "API Services",
+      "description": "AI API platforms and services"
+    },
+    "workflow-automation": {
+      "name": "Workflow Automation",
+      "description": "Tools for automating workflows with AI"
+    },
+    "testing-qa": {
+      "name": "Testing & QA",
+      "description": "AI-powered testing and quality assurance"
+    }
+  },
+  "tools": [
+    {
+      "id": "llama-3.1-405b",
+      "name": "Meta Llama 3.1 405B",
+      "category": "language-models",
+      "vendor": "Meta",
+      "description": "Open-source flagship model competing with GPT-4, featuring 128K context length and superior synthetic data generation capabilities",
+      "version": "3.1",
+      "releaseDate": "2024-07",
+      "license": "Meta Custom License",
+      "pricing": {
+        "type": "open-source",
+        "cost": "Free (self-hosted)"
+      },
+      "capabilities": [
+        "Text generation",
+        "Chat completion",
+        "Synthetic data generation",
+        "Long context (128K tokens)",
+        "Multilingual support"
+      ],
+      "benchmarks": {
+        "parameters": "405B",
+        "contextLength": 128000,
+        "performance": "GPT-4 competitive"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "selfHostable": true,
+        "cloudProviders": ["AWS", "Google Cloud", "Azure"]
+      },
+      "useCases": [
+        "Enterprise AI applications",
+        "Synthetic training data generation",
+        "Custom AI model training",
+        "Research and development"
+      ],
+      "documentation": "https://ai.meta.com/llama/",
+      "tags": ["llm", "open-source", "meta", "large-model", "multilingual"],
+      "rating": 4.8,
+      "popularity": 95,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "Privacy-focused"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "llama-3.1-70b",
+      "name": "Meta Llama 3.1 70B",
+      "category": "language-models",
+      "vendor": "Meta",
+      "description": "Mid-size open-source model balancing performance and efficiency, ideal for production deployments",
+      "version": "3.1",
+      "releaseDate": "2024-07",
+      "license": "Meta Custom License",
+      "pricing": {
+        "type": "open-source",
+        "cost": "Free (self-hosted)"
+      },
+      "capabilities": [
+        "Text generation",
+        "Chat completion",
+        "Code generation",
+        "Long context (128K tokens)"
+      ],
+      "benchmarks": {
+        "parameters": "70B",
+        "contextLength": 128000,
+        "performance": "High efficiency/performance ratio"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "selfHostable": true,
+        "cloudProviders": ["AWS", "Google Cloud", "Azure"]
+      },
+      "useCases": [
+        "Production applications",
+        "Cost-effective deployments",
+        "Edge computing",
+        "Real-time applications"
+      ],
+      "documentation": "https://ai.meta.com/llama/",
+      "tags": ["llm", "open-source", "meta", "efficient", "production-ready"],
+      "rating": 4.7,
+      "popularity": 88,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "Privacy-focused"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "llama-3.1-8b",
+      "name": "Meta Llama 3.1 8B",
+      "category": "language-models",
+      "vendor": "Meta",
+      "description": "Lightweight open-source model optimized for speed and resource efficiency",
+      "version": "3.1",
+      "releaseDate": "2024-07",
+      "license": "Meta Custom License",
+      "pricing": {
+        "type": "open-source",
+        "cost": "Free (self-hosted)"
+      },
+      "capabilities": [
+        "Fast text generation",
+        "Lightweight inference",
+        "Edge deployment",
+        "Real-time responses"
+      ],
+      "benchmarks": {
+        "parameters": "8B",
+        "contextLength": 128000,
+        "performance": "Optimized for speed"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "selfHostable": true,
+        "cloudProviders": ["AWS", "Google Cloud", "Azure"],
+        "edgeDeployment": true
+      },
+      "useCases": [
+        "Edge devices",
+        "Mobile applications",
+        "Low-latency requirements",
+        "Resource-constrained environments"
+      ],
+      "documentation": "https://ai.meta.com/llama/",
+      "tags": ["llm", "open-source", "meta", "lightweight", "edge", "fast"],
+      "rating": 4.6,
+      "popularity": 82,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "Privacy-focused"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "flux1-schnell",
+      "name": "FLUX.1 Schnell",
+      "category": "image-generation",
+      "vendor": "Black Forest Labs",
+      "description": "Commercial-free image generation model with 12B parameters, exceptional text integration and realistic human representations",
+      "version": "1.0",
+      "releaseDate": "2024-08",
+      "license": "Apache 2.0",
+      "pricing": {
+        "type": "open-source",
+        "cost": "Free"
+      },
+      "capabilities": [
+        "High-quality image generation",
+        "Text-to-image",
+        "Accurate text rendering",
+        "Realistic human anatomy",
+        "Fast generation (Schnell mode)"
+      ],
+      "benchmarks": {
+        "parameters": "12B",
+        "quality": "State-of-the-art",
+        "speedMode": "Schnell (Fast)"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "selfHostable": true,
+        "compatibleWith": ["ComfyUI", "AUTOMATIC1111", "SD WebUI"]
+      },
+      "useCases": [
+        "Commercial image generation",
+        "Marketing materials",
+        "Product design",
+        "Creative workflows"
+      ],
+      "documentation": "https://blackforestlabs.ai/",
+      "tags": ["image-generation", "open-source", "text-to-image", "commercial", "fast"],
+      "rating": 4.9,
+      "popularity": 91,
+      "communitySize": "growing",
+      "securityCompliance": ["Open-source"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "flux1-dev",
+      "name": "FLUX.1 Dev",
+      "category": "image-generation",
+      "vendor": "Black Forest Labs",
+      "description": "Development version with enhanced quality for non-commercial applications",
+      "version": "1.0",
+      "releaseDate": "2024-08",
+      "license": "Non-commercial",
+      "pricing": {
+        "type": "free-non-commercial",
+        "cost": "Free (non-commercial)"
+      },
+      "capabilities": [
+        "Highest quality image generation",
+        "Text-to-image",
+        "Advanced text rendering",
+        "Fine-tunable"
+      ],
+      "benchmarks": {
+        "parameters": "12B",
+        "quality": "Maximum quality",
+        "speedMode": "Standard"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "selfHostable": true,
+        "compatibleWith": ["ComfyUI", "AUTOMATIC1111", "SD WebUI"]
+      },
+      "useCases": [
+        "Research projects",
+        "Non-commercial art",
+        "Experimentation",
+        "Fine-tuning"
+      ],
+      "documentation": "https://blackforestlabs.ai/",
+      "tags": ["image-generation", "open-source", "text-to-image", "non-commercial", "high-quality"],
+      "rating": 4.8,
+      "popularity": 85,
+      "communitySize": "growing",
+      "securityCompliance": ["Open-source"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "codeium",
+      "name": "Codeium",
+      "category": "code-assistance",
+      "vendor": "Codeium",
+      "description": "Unlimited AI code completion without usage restrictions, supporting 70+ languages",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary (Free tier)",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free (unlimited)",
+        "tiers": {
+          "individual": "Free",
+          "teams": "$12/user/month",
+          "enterprise": "Custom"
+        }
+      },
+      "capabilities": [
+        "Code completion",
+        "Code explanation",
+        "Code refactoring",
+        "Multi-file context",
+        "70+ language support"
+      ],
+      "benchmarks": {
+        "languages": 70,
+        "accuracy": "High",
+        "latency": "Low (<100ms)"
+      },
+      "integration": {
+        "ides": ["VS Code", "IntelliJ", "PyCharm", "WebStorm", "Vim", "Emacs"],
+        "apiAvailable": true
+      },
+      "useCases": [
+        "Code development",
+        "Code review",
+        "Learning programming",
+        "Refactoring legacy code"
+      ],
+      "documentation": "https://codeium.com/",
+      "tags": ["code-completion", "free", "unlimited", "multi-language", "ide"],
+      "rating": 4.7,
+      "popularity": 87,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "GDPR"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "category": "code-assistance",
+      "vendor": "Codeium",
+      "description": "AI-native IDE with multi-file understanding and agentic coding capabilities",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free tier available"
+      },
+      "capabilities": [
+        "Agentic coding",
+        "Multi-file understanding",
+        "Contextual code generation",
+        "Intelligent refactoring",
+        "Project-wide analysis"
+      ],
+      "benchmarks": {
+        "contextWindow": "Large",
+        "accuracy": "Very High"
+      },
+      "integration": {
+        "standalone": true,
+        "gitIntegration": true
+      },
+      "useCases": [
+        "Full-stack development",
+        "Large codebases",
+        "Complex refactoring",
+        "New project scaffolding"
+      ],
+      "documentation": "https://codeium.com/windsurf",
+      "tags": ["ide", "agentic", "multi-file", "ai-native", "comprehensive"],
+      "rating": 4.8,
+      "popularity": 79,
+      "communitySize": "growing",
+      "securityCompliance": ["SOC2", "GDPR"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "qodo",
+      "name": "Qodo (formerly CodiumAI)",
+      "category": "testing-qa",
+      "vendor": "Qodo",
+      "description": "Automated test generation focusing on quality assurance and code coverage",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free tier available"
+      },
+      "capabilities": [
+        "Automated test generation",
+        "Test coverage analysis",
+        "Edge case detection",
+        "Integration test generation",
+        "Test maintenance"
+      ],
+      "benchmarks": {
+        "coverageImprovement": "30-70%",
+        "testQuality": "High"
+      },
+      "integration": {
+        "ides": ["VS Code", "IntelliJ", "PyCharm"],
+        "cicd": ["GitHub Actions", "GitLab CI", "Jenkins"]
+      },
+      "useCases": [
+        "Test-driven development",
+        "Legacy code testing",
+        "Continuous testing",
+        "Quality assurance automation"
+      ],
+      "documentation": "https://qodo.ai/",
+      "tags": ["testing", "qa", "automation", "coverage", "tdd"],
+      "rating": 4.6,
+      "popularity": 75,
+      "communitySize": "medium",
+      "securityCompliance": ["SOC2", "GDPR"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "ai-blaze",
+      "name": "AI Blaze",
+      "category": "browser-extensions",
+      "vendor": "Blaze Today",
+      "description": "Free ChatGPT access across any website with custom prompt templates",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary (Free)",
+      "pricing": {
+        "type": "free",
+        "cost": "Free"
+      },
+      "capabilities": [
+        "ChatGPT integration",
+        "Custom prompt templates",
+        "Cross-website access",
+        "Text expansion",
+        "Workflow automation"
+      ],
+      "benchmarks": {
+        "speed": "Fast",
+        "availability": "99.9%"
+      },
+      "integration": {
+        "browsers": ["Chrome", "Firefox", "Edge"],
+        "platforms": ["Web"]
+      },
+      "useCases": [
+        "Content writing",
+        "Email responses",
+        "Research assistance",
+        "Customer support"
+      ],
+      "documentation": "https://blaze.today/",
+      "tags": ["browser-extension", "chatgpt", "free", "productivity", "templates"],
+      "rating": 4.5,
+      "popularity": 81,
+      "communitySize": "medium",
+      "securityCompliance": ["Privacy-focused"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "magical",
+      "name": "Magical",
+      "category": "browser-extensions",
+      "vendor": "Magical",
+      "description": "Agentic automation that learns user workflows for intelligent task automation",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free tier available"
+      },
+      "capabilities": [
+        "Workflow learning",
+        "Intelligent automation",
+        "Data extraction",
+        "Form filling",
+        "Cross-app integration"
+      ],
+      "benchmarks": {
+        "timeSaved": "7 hours/week average",
+        "accuracy": "95%+"
+      },
+      "integration": {
+        "browsers": ["Chrome", "Firefox", "Edge"],
+        "apps": ["Salesforce", "Gmail", "Notion", "LinkedIn"]
+      },
+      "useCases": [
+        "Sales workflows",
+        "Data entry automation",
+        "CRM management",
+        "Recruiting processes"
+      ],
+      "documentation": "https://www.getmagical.com/",
+      "tags": ["browser-extension", "automation", "workflow", "agentic", "productivity"],
+      "rating": 4.7,
+      "popularity": 84,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "GDPR"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "harpa-ai",
+      "name": "HARPA AI",
+      "category": "browser-extensions",
+      "vendor": "HARPA",
+      "description": "Comprehensive web monitoring and data automation with AI capabilities",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free tier available"
+      },
+      "capabilities": [
+        "Web page monitoring",
+        "Data extraction",
+        "Automated actions",
+        "AI chat integration",
+        "Custom workflows"
+      ],
+      "benchmarks": {
+        "monitoringFrequency": "Real-time",
+        "dataAccuracy": "High"
+      },
+      "integration": {
+        "browsers": ["Chrome", "Edge"],
+        "apis": ["Multiple AI providers"]
+      },
+      "useCases": [
+        "Price monitoring",
+        "Content tracking",
+        "Competitive analysis",
+        "News aggregation"
+      ],
+      "documentation": "https://harpa.ai/",
+      "tags": ["browser-extension", "monitoring", "automation", "data-extraction", "ai"],
+      "rating": 4.6,
+      "popularity": 77,
+      "communitySize": "medium",
+      "securityCompliance": ["Privacy-focused"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "gemini-api",
+      "name": "Google Gemini API",
+      "category": "api-services",
+      "vendor": "Google",
+      "description": "Google's competitive AI API with generous free tier: 15 requests/minute, 1M tokens daily",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free tier: 15 req/min, 1M tokens/day",
+        "paid": "$0.075 per 1M input tokens (Pro)"
+      },
+      "capabilities": [
+        "Text generation",
+        "Multimodal understanding",
+        "Code generation",
+        "Function calling",
+        "Long context (2M tokens)"
+      ],
+      "benchmarks": {
+        "contextLength": 2000000,
+        "performance": "GPT-4 competitive",
+        "freeTierLimit": "1M tokens/day"
+      },
+      "integration": {
+        "sdks": ["Python", "JavaScript", "Go", "Java"],
+        "apiAvailable": true,
+        "restful": true
+      },
+      "useCases": [
+        "Application integration",
+        "Chatbot development",
+        "Content generation",
+        "Code assistance"
+      ],
+      "documentation": "https://ai.google.dev/",
+      "tags": ["api", "google", "multimodal", "free-tier", "generous-limits"],
+      "rating": 4.7,
+      "popularity": 89,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "GDPR", "HIPAA"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "mistral-api",
+      "name": "Mistral AI API",
+      "category": "api-services",
+      "vendor": "Mistral AI",
+      "description": "Cost-effective European AI API with 50% price reduction (Sept 2024), focusing on efficiency",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "paid",
+        "cost": "Starting at $0.10 per 1M tokens (50% reduction)",
+        "models": {
+          "mistral-small": "$0.10/1M tokens",
+          "mistral-medium": "$0.25/1M tokens",
+          "mistral-large": "$0.40/1M tokens"
+        }
+      },
+      "capabilities": [
+        "Efficient text generation",
+        "Code generation",
+        "Function calling",
+        "Multilingual support",
+        "Fast inference"
+      ],
+      "benchmarks": {
+        "contextLength": 32000,
+        "performance": "High efficiency",
+        "costEfficiency": "Excellent"
+      },
+      "integration": {
+        "sdks": ["Python", "JavaScript"],
+        "apiAvailable": true,
+        "restful": true
+      },
+      "useCases": [
+        "Cost-sensitive applications",
+        "European data compliance",
+        "Production deployments",
+        "Multilingual applications"
+      ],
+      "documentation": "https://mistral.ai/",
+      "tags": ["api", "efficient", "cost-effective", "european", "multilingual"],
+      "rating": 4.6,
+      "popularity": 83,
+      "communitySize": "growing",
+      "securityCompliance": ["GDPR", "EU AI Act compliant"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "anthropic-claude",
+      "name": "Anthropic Claude API",
+      "category": "api-services",
+      "vendor": "Anthropic",
+      "description": "Advanced AI with 200K context, strong reasoning, and constitutional AI safety",
+      "version": "3.5 Sonnet",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "paid",
+        "cost": "$3.00 per 1M input tokens, $15.00 per 1M output tokens"
+      },
+      "capabilities": [
+        "Long context (200K tokens)",
+        "Advanced reasoning",
+        "Code generation",
+        "Analysis and research",
+        "Constitutional AI safety"
+      ],
+      "benchmarks": {
+        "contextLength": 200000,
+        "performance": "State-of-the-art",
+        "safety": "Highest"
+      },
+      "integration": {
+        "sdks": ["Python", "JavaScript", "TypeScript"],
+        "apiAvailable": true,
+        "restful": true
+      },
+      "useCases": [
+        "Complex reasoning tasks",
+        "Long document analysis",
+        "Research assistance",
+        "Safe AI applications"
+      ],
+      "documentation": "https://anthropic.com/",
+      "tags": ["api", "safe-ai", "long-context", "reasoning", "advanced"],
+      "rating": 4.9,
+      "popularity": 92,
+      "communitySize": "large",
+      "securityCompliance": ["SOC2", "GDPR", "HIPAA"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "workflow-automation",
+      "vendor": "n8n",
+      "description": "Open-source workflow automation with visual node-based builder and AI integration",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Fair-code (Apache 2.0 with Commons Clause)",
+      "pricing": {
+        "type": "open-source",
+        "cost": "Free (self-hosted)",
+        "cloud": "$20/month"
+      },
+      "capabilities": [
+        "Visual workflow builder",
+        "400+ integrations",
+        "AI node support",
+        "Event-driven automation",
+        "Custom code execution"
+      ],
+      "benchmarks": {
+        "integrations": 400,
+        "performance": "High throughput"
+      },
+      "integration": {
+        "selfHostable": true,
+        "cloudAvailable": true,
+        "apiAvailable": true
+      },
+      "useCases": [
+        "Business process automation",
+        "Data synchronization",
+        "AI workflow orchestration",
+        "Integration platforms"
+      ],
+      "documentation": "https://n8n.io/",
+      "tags": ["workflow", "automation", "open-source", "visual", "integrations"],
+      "rating": 4.8,
+      "popularity": 86,
+      "communitySize": "large",
+      "securityCompliance": ["Self-hosted", "SOC2 (Cloud)"],
+      "lastVerified": "2025-11-06"
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "category": "workflow-automation",
+      "vendor": "Zapier",
+      "description": "Industry-leading automation platform with 6000+ app integrations and AI capabilities",
+      "version": "Latest",
+      "releaseDate": "2024",
+      "license": "Proprietary",
+      "pricing": {
+        "type": "freemium",
+        "cost": "Free: 100 tasks/month",
+        "tiers": {
+          "starter": "$19.99/month",
+          "professional": "$49/month",
+          "team": "$299/month"
+        }
+      },
+      "capabilities": [
+        "6000+ app integrations",
+        "Multi-step workflows",
+        "AI automation",
+        "Conditional logic",
+        "Data formatting"
+      ],
+      "benchmarks": {
+        "integrations": 6000,
+        "reliability": "99.9% uptime"
+      },
+      "integration": {
+        "apiAvailable": true,
+        "webhooks": true,
+        "cloudOnly": true
+      },
+      "useCases": [
+        "Marketing automation",
+        "Sales workflows",
+        "Customer onboarding",
+        "Data synchronization"
+      ],
+      "documentation": "https://zapier.com/",
+      "tags": ["workflow", "automation", "saas", "integrations", "no-code"],
+      "rating": 4.7,
+      "popularity": 94,
+      "communitySize": "very large",
+      "securityCompliance": ["SOC2", "GDPR", "HIPAA"],
+      "lastVerified": "2025-11-06"
+    }
+  ],
+  "metadata": {
+    "totalTools": 17,
+    "categoryCounts": {
+      "language-models": 3,
+      "image-generation": 2,
+      "code-assistance": 3,
+      "browser-extensions": 3,
+      "api-services": 4,
+      "workflow-automation": 2,
+      "testing-qa": 1
+    }
+  }
+}

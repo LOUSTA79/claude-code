@@ -57,6 +57,17 @@
       },
       "source": "./plugins/security-guidance",
       "category": "security"
+    },
+    {
+      "name": "ai-playground",
+      "description": "Professional AI Playground Platform - Discover, compare, and integrate the latest AI tools (2024-2025) with enterprise-grade features including semantic search, tool recommendations, workflow automation, real-time collaboration, and comprehensive analytics",
+      "version": "1.0.0",
+      "author": {
+        "name": "Claude Code Team",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/ai-playground",
+      "category": "development"
     }
   ]
 }
