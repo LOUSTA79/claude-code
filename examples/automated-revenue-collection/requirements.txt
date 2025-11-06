@@ -12,6 +12,7 @@ pycryptodome>=3.19.0
 # API clients
 stripe>=7.0.0
 paypalrestsdk>=1.13.1
+openai>=1.0.0  # For book generation
 
 # AWS (for production secrets management)
 boto3>=1.28.0
