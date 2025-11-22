@@ -1,0 +1,35 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0.0",
+    "FriendlyName": "Navigation Plugin",
+    "Description": "AI-powered navigation system for Unreal Engine 5 with HTTP server integration for external control",
+    "Category": "Editor",
+    "CreatedBy": "Claude AI",
+    "CreatedByURL": "https://www.anthropic.com",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "CanContainContent": true,
+    "IsBetaVersion": false,
+    "IsExperimentalVersion": false,
+    "Installed": false,
+    "Modules": [
+        {
+            "Name": "NavigationPlugin",
+            "Type": "Editor",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "Engine",
+                "UnrealEd",
+                "HTTPServer"
+            ]
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "HTTPServer",
+            "Enabled": true
+        }
+    ]
+}

@@ -57,6 +57,17 @@
       },
       "source": "./plugins/security-guidance",
       "category": "security"
+    },
+    {
+      "name": "ue5-navigation",
+      "description": "A comprehensive plugin for developing Unreal Engine 5 navigation systems with HTTP server integration, asset management, and AI-powered navigation features",
+      "version": "1.0.0",
+      "author": {
+        "name": "Claude Code",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/ue5-navigation",
+      "category": "development"
     }
   ]
 }

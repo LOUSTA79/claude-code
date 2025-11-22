@@ -1,0 +1,11 @@
+{
+  "name": "ue5-navigation",
+  "version": "1.0.0",
+  "description": "A comprehensive plugin for developing Unreal Engine 5 navigation systems with HTTP server integration, asset management, and AI-powered navigation features",
+  "author": {
+    "name": "Claude Code",
+    "email": "support@anthropic.com"
+  },
+  "tags": ["ue5", "unreal-engine", "navigation", "game-development", "http-server"],
+  "license": "MIT"
+}
