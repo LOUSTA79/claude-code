@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- **UE5 Navigation Plugin**: New comprehensive plugin for developing Unreal Engine 5 navigation systems
+  - Complete NavigationServer C++ implementation with HTTP server integration
+  - RESTful API for external navigation control (asset management, viewport control, Blueprint navigation)
+  - Specialized AI agents: UE5 Architect, Navigation Code Reviewer, API Documentation Generator
+  - Commands: `/scaffold-navigation-plugin`, `/add-navigation-feature`, `/test-navigation-api`
+  - Production-ready templates with full source code (3500+ lines)
+  - Extensive documentation and integration examples (Python, JavaScript, PowerShell)
+
 ## 2.0.13
 
 - Fixed `/plugin` not working on native build
