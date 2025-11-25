@@ -1,9 +1,8 @@
 # Core dependencies
-python>=3.9
+# Requires Python 3.9+
 
 # HTTP/Async
 aiohttp>=3.9.0
-asyncio
 
 # Cryptography and Security
 cryptography>=41.0.0
