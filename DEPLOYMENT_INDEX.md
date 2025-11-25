@@ -354,13 +354,13 @@ What do you want to do?
 
 | Document | Status | Last Updated |
 |----------|--------|--------------|
-| DEPLOYMENT_INDEX.md | ✅ Complete | 2025-11-12 |
-| DEPLOYMENT_QUICKSTART.md | ✅ Complete | 2025-11-12 |
-| DEPLOYMENT_README.md | ✅ Complete | 2025-11-12 |
-| PLUGIN_CREATION_EXAMPLE.md | ✅ Complete | 2025-11-12 |
-| SCRIPT_REVIEW.md | ✅ Complete | 2025-11-12 |
-| DEPLOYMENT_COMPARISON.md | ✅ Complete | 2025-11-12 |
-| scripts/deploy-claude-code.sh | ✅ Complete | 2025-11-12 |
+| DEPLOYMENT_INDEX.md | ✅ Complete | 2025-11-25 |
+| DEPLOYMENT_QUICKSTART.md | ✅ Complete | 2025-11-25 |
+| DEPLOYMENT_README.md | ✅ Complete | 2025-11-25 |
+| PLUGIN_CREATION_EXAMPLE.md | ✅ Complete | 2025-11-25 |
+| SCRIPT_REVIEW.md | ✅ Complete | 2025-11-25 |
+| DEPLOYMENT_COMPARISON.md | ✅ Complete | 2025-11-25 |
+| scripts/deploy-claude-code.sh | ✅ Complete | 2025-11-25 |
 
 ---
 
@@ -394,4 +394,4 @@ Master deployment: [DEPLOYMENT_README.md](./DEPLOYMENT_README.md)
 
 **Happy coding with Claude!** 🎉
 
-*Last updated: 2025-11-12*
+*Last updated: 2025-11-25*
